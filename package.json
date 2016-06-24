@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "My sparrow-client",
   "repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/kostkobv/sparrow-client.git"
+    "type": "git",
+    "url": "git+https://github.com/kostkobv/sparrow-client.git"
   },
   "author": {
     "name": "Bohdan Kostko",
@@ -36,6 +36,8 @@
     "webpack-hot-middleware": "2.4.x"
   },
   "dependencies": {
-    "isotope-layout": "3.0.x"
+    "isotope-layout": "3.0.x",
+    "kalm": "1.2.x",
+    "kalm-websocket": "1.2.x"
   }
 }
