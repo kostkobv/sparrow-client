@@ -11,6 +11,7 @@ let grid;
 let itemTemplate;
 const items = {};
 const GRID_ITEM_SELECTOR = `.${config.GRID_ITEM_CLASS}`;
+const $gridEl = $(config.GRID_SELECTOR);
 
 /**
  * Clears the grid element
@@ -50,8 +51,10 @@ export function init() {
  * @returns {jQuery|HTMLElement}
  */
 function createDomItem(item) {
+	item.text = decodeURI(item.text);
 	Object.assign(item, { itemClass: config.GRID_ITEM_CLASS });
 	const el = Mustache.render(template, item);
+
 	return $(el);
 }
 
@@ -70,10 +73,11 @@ export function addItem(item, silence) {
 	const $domItem = createDomItem(item);
 
 	items[item.id] = item;
-	$(config.GRID_SELECTOR).prepend($domItem);
+	$gridEl.prepend($domItem);
 
 	if (!silence) {
 		grid.prepended($domItem[0]);
+		$domItem.find('img').on('load', render);
 		render();
 	}
 
@@ -95,6 +99,8 @@ export function addItems(items) {
 	}
 
 	grid.prepended(domItems);
+
+	$gridEl.find('img').on('load', _.debounce(render, 50));
 	render();
 
 	return domItems;

@@ -4,7 +4,9 @@
 	</div>
 	<div class="{{ itemClass }}__author">
 		<aside class="{{ itemClass }}__author--avatar">
-			<img src="{{ user:profileImageUrlHttps }}">
+			<a href="{{ user:url }}" target="_blank">
+				<img src="{{ user:profileImageUrlHttps }}">
+			</a>
 		</aside>
 		<div class="{{ itemClass }}__author--text-wrapper">
 			<span class="{{ itemClass }}__author--date">{{ created_at }}</span>

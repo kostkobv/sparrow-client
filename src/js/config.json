@@ -3,7 +3,7 @@
   	"GRID_ITEM_CLASS": "tweet",
 	"GRID_STYLE": "fitRows",
 
-	"SOCKET_HOSTNAME": "http://localhost",
+	"SOCKET_HOSTNAME": "http://188.166.51.156",
 	"SOCKET_PORT": "26001",
 	"SOCKET_TWEETS_CHANNEL": "tweets",
 	"SOCKET_TWEET_CHANNEL": "tweet"
