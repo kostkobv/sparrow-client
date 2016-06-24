@@ -1,3 +1,78 @@
-body {
-	font-family: Helvetica, sans-serif;
+body, html {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+$avatar-height: 48px;
+$break-small: 1024px;
+
+$light-blue: #62b4ff;
+$dark: #333333;
+
+#tweets {
+	width: 100%;
+
+	.tweet {
+		width: 31%;
+		margin: 1%;
+		float: left;
+
+		@media screen and (max-width: $break-small) {
+			width: 48%;
+			margin: 1%;
+		}
+
+		&__content {
+			padding: 10%;
+			line-height: 1.5em;
+			font-family: "Open Sans";
+			font-weight: 300;
+			color: white;
+			background-color: $light-blue;
+			font-size: 1.3em;
+			text-align: center;
+		}
+
+		&__author {
+			padding: 0.5em;
+			border: 1px solid $light-blue;
+			height: $avatar-height;
+
+			&--avatar {
+				width: auto;
+				display: inline-block;
+				height: $avatar-height;
+
+				& > img {
+					border-radius: 100%;
+					height: $avatar-height;
+				}
+			}
+
+			&--date {
+				display: inline-block;
+				width: 100%;
+				font-size: .7em;
+				color: $dark;
+				font-weight: lighter;
+				vertical-align: top;
+			}
+
+			&--text-wrapper {
+				width: calc(100% - #{$avatar-height + 10px});
+				display: inline-block;
+				vertical-align: top;
+				padding: 0.1em;
+				box-sizing: border-box;
+				height: 48px;
+			}
+
+			&--name {
+				width: 100%;
+				display: inline;
+				vertical-align: top;
+			}
+		}
+	}
 }
