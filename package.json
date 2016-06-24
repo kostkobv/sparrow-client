@@ -39,6 +39,8 @@
   "dependencies": {
     "isotope-layout": "3.0.x",
     "jquery": "2.2.x",
+    "lodash": "^4.13.1",
+    "mustache": "^2.2.1",
     "socket.io-client": "1.4.x"
   }
 }
