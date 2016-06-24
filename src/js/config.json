@@ -1,7 +1,10 @@
 {
-  	"GRID_SELECTOR": ".tweets",
-  	"GRID_ITEM_SELECTOR": ".tweet",
+  	"GRID_SELECTOR": "#tweets",
+  	"GRID_ITEM_CLASS": "tweet",
 	"GRID_STYLE": "fitRows",
-	"HOSTNAME": "http://localhost",
-	"PORT": "26001"
+
+	"SOCKET_HOSTNAME": "http://localhost",
+	"SOCKET_PORT": "26001",
+	"SOCKET_TWEETS_CHANNEL": "tweets",
+	"SOCKET_TWEET_CHANNEL": "tweet"
 }
