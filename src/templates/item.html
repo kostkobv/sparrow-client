@@ -1,6 +1,14 @@
-<div class="item">
-	{{ text }}
-	{{ date }}
-	{{ author }}
-	{{ avatar }}
+<div class="{{ itemClass }}">
+	<div class="{{ itemClass }}__content">
+		{{ text }}
+	</div>
+	<div class="{{ itemClass }}__author">
+		<aside class="{{ itemClass }}__author--avatar">
+			<img src="{{ user:profileImageUrlHttps }}">
+		</aside>
+		<div class="{{ itemClass }}__author--text-wrapper">
+			<span class="{{ itemClass }}__author--date">{{ created_at }}</span>
+			<span class="{{ itemClass }}__author--name">{{ user:name }}</span>
+		</div>
+	</div>
 </div>
