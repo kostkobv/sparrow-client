@@ -1,16 +1,19 @@
 {
   "name": "sparrow-client",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "My sparrow-client",
-  "repository": "git+https://github.com/kostkobv/sparrow-client.git",
+  "repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/kostkobv/sparrow-client.git"
+  },
   "author": {
-  	"name": "Bohdan Kostko",
-  	"email": "bohdan.kostko@gmail.com",
-  	"url": ""
+    "name": "Bohdan Kostko",
+    "email": "bohdan.kostko@gmail.com",
+    "url": ""
   },
   "scripts": {
-  	"start": "export NODE_ENV='development'; webpack; node ./server.js",
-  	"build": "export NODE_ENV='production'; cp ./src/index.html ./build/index.html; webpack"
+    "start": "export NODE_ENV='development'; webpack; node ./server.js",
+    "build": "export NODE_ENV='production'; cp ./src/index.html ./build/index.html; webpack"
   },
   "license": "MIT",
   "devDependencies": {
@@ -31,5 +34,8 @@
     "es6-promise": "3.0.x",
     "webpack-dev-middleware": "1.0.x",
     "webpack-hot-middleware": "2.4.x"
+  },
+  "dependencies": {
+    "isotope-layout": "3.0.x"
   }
 }
