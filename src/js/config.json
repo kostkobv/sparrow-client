@@ -1,0 +1,7 @@
+{
+  	"GRID_SELECTOR": ".tweets",
+  	"GRID_ITEM_SELECTOR": ".tweet",
+	"GRID_STYLE": "fitRows",
+	"HOSTNAME": "http://localhost",
+	"PORT": "26001"
+}

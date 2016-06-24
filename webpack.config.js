@@ -37,17 +37,22 @@ module.exports = {
 		modules: true,
 		reasons: true
 	},
+	node: {
+		fs: 'empty',
+		net: 'empty',
+		tls: 'empty'
+	},
 	resolve: {
 		alias: {},
 		modulesDirectories: [
 			'node_modules'
-		],
+		]
 	},
 	module: {
 		loaders: [
 			{
 				test: /\.js?$/,
-				loader: 'babel?presets[]=es2015',
+				loader: 'babel-loader',
 				exclude: /node_modules/
 			},
 			{
